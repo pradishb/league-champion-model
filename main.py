@@ -39,6 +39,7 @@ def _train(image):
 
 def main():
     '''Training using a directory of images'''
+    os.makedirs('model', exist_ok=True)
     model = {}
     for file_path in glob(os.path.join('train', '*', '*.png')):
         directory = os.path.split(file_path)[0]

@@ -15,9 +15,7 @@ ROI = 331, 721, 15, 15
 
 @timeit
 def _predict(image):
-    for _ in range(1000):
-        champion = predict('model/champion.json', image)
-    return champion
+    return predict('model/champion.json', image)
 
 
 class TestCase(unittest.TestCase):
